@@ -129,7 +129,7 @@ namespace StackExchange.Opserver.Data.Dashboard
         {
             get
             {
-                if (_primaryInterfaces == null)
+                if ((_primaryInterfaces?.Count ?? 0) == 0)
                 {
                     var s = Settings;
                     var dbInterfaces = s?.PrimaryInterfacePatternRegex != null
